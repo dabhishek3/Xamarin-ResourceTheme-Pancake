@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResourceApp.Themechangepage" BackgroundColor="{DynamicResource PageBackgroundColor}" Title="Theme Change Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0">
+                        <Label Text="Dark Mode" x:Name="Darkmode" FontAttributes="Bold" Style="{StaticResource MediumLabelStyle}" HorizontalOptions="CenterAndExpand"></Label>
+                        <Image Source="lampdark" HorizontalOptions="CenterAndExpand" HeightRequest="55"  WidthRequest="55"  VerticalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="darkmodetapped"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        
+                    </StackLayout>
+                    <BoxView Grid.Row="1" BackgroundColor="DeepPink" HeightRequest="10"></BoxView>
+                    <StackLayout Grid.Row="2">
+                        <Label Text="Light Mode" x:Name="Lightmode"  FontAttributes="Bold" Style="{StaticResource MediumLabelStyle}" HorizontalOptions="CenterAndExpand"></Label>
+
+                        <Image Source="lamplight" HorizontalOptions="CenterAndExpand" HeightRequest="55"  WidthRequest="55" VerticalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="lightmodetapped"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

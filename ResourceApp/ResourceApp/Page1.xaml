@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResourceApp.Page1" BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <NavigationPage.TitleView >
+        
+        <StackLayout Margin="0,0,0,0" HorizontalOptions="EndAndExpand" Orientation="Horizontal" VerticalOptions="Center">
+            <Label Text="Main Page" Style="{StaticResource MediumLabelStyle}" FontAttributes="Bold" TextColor="White" HorizontalOptions="StartAndExpand" Margin="0,0,120,0"></Label>
+            <Label Text="Change Mode" Style="{StaticResource MediumLabelStyle}" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="End" Margin="0,0,10,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Button_Clicked_3"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout>
+                <Label Text="Addmission Page" Style="{StaticResource MediumLabelStyle}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <StackLayout>
+                    <Frame CornerRadius="15" BackgroundColor="#f2f2f2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Entry Text="Name" Placeholder="Name" Grid.Row="0" />
+                            <Entry Text="Age" Placeholder="Age" Grid.Row="1" />
+                            <Entry Text="Address" Placeholder="Address" Grid.Row="2"/>
+                            <Button Text="Submit"  HorizontalOptions="CenterAndExpand" Grid.Row="3" Style="{StaticResource ButtonStyle}" Clicked="Button_Clicked_2"/>
+                            
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

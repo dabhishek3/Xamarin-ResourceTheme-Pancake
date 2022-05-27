@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResourceApp.MainPage" Title="Normal Page" BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <StackLayout>
+        <Frame BackgroundColor="Yellow" Padding="0">
+            <Label Text="Application Name" Style="{StaticResource MediumLabelStyle}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+        </Frame>
+        <StackLayout>
+            <Label Text="Registration Page" Style="{StaticResource MediumLabelStyle}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <StackLayout>
+                <Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Entry Text="Name" Placeholder="Name" PlaceholderColor="Red" Grid.Row="0" />
+                        <Entry Text="Age" Placeholder="Age" PlaceholderColor="Red" Grid.Row="1" />
+                        <Entry Text="Address" Placeholder="Address" PlaceholderColor="Red" Grid.Row="2"/>
+                        <Button Text="Submit"  HorizontalOptions="CenterAndExpand" Grid.Row="3" IsEnabled="False"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+
+        </StackLayout>
+
+        <Label Text="Term and Condition" Style="{StaticResource MediumLabelStyle}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Text="Application under maintaince Please contact to owner of the application 2020."
+                   Style="{StaticResource MediumLabelStyle}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Start" Padding="10"/>
+
+        <Button Margin="20,0" Style="{StaticResource ButtonStyle}" Text="Next page" HeightRequest="70" Clicked="Button_Clicked_1" HorizontalOptions="CenterAndExpand"></Button>
+    </StackLayout>
+    
+   
+
+</ContentPage>

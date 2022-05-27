@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "t3n5zfpXdAHnyraAhDFnvB+hTe+tQNo/thXmOuXS6Y8S2DuPBiP5KNYm8gSuUKskL58kLqfX3+MKrzgq6tzHUw==",
+  "success": true,
+  "projectFilePath": "D:\\F drive\\New Volume\\ResourceApp\\ResourceApp\\ResourceApp.iOS\\ResourceApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Me\\.nuget\\packages\\refractored.mvvmhelpers\\1.6.2\\refractored.mvvmhelpers.1.6.2.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\syncfusion.licensing\\17.1.0.50\\syncfusion.licensing.17.1.0.50.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\syncfusion.xamarin.core\\17.1.0.50\\syncfusion.xamarin.core.17.1.0.50.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\syncfusion.xamarin.sfrating\\17.1.0.50\\syncfusion.xamarin.sfrating.17.1.0.50.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\xamarin.forms\\4.8.0.1687\\xamarin.forms.4.8.0.1687.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+  ],
+  "logs": []
+}

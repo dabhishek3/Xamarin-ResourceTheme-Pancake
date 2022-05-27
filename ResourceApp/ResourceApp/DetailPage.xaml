@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResourceApp.DetailPage" BackgroundColor="{DynamicResource PageBackgroundColor}" Title="Detail Page"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms">
+        <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <yummy:PancakeView CornerRadius="0,0,70,0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" IsClippedToBounds="true">
+                <Image Source="five" VerticalOptions="Start" Aspect="AspectFill" HeightRequest="230"/>
+            </yummy:PancakeView>
+            <yummy:PancakeView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="Start" WidthRequest="40" CornerRadius="0,0,20,0" HeightRequest="40">
+                <Image Grid.Row="0" Source="heart"></Image>
+            </yummy:PancakeView>
+            <!--Desert Name-->
+            <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Text="Peanut Smoothie" Padding="35,20,0,0" Style="{StaticResource SmallLabelStyle}" FontAttributes="Bold" FontSize="26"/>
+            <yummy:PancakeView Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Padding="0,0,30,0">
+                <Button VerticalOptions="Center" Style="{StaticResource ButtonStyle}" ImageSource="heart" HorizontalOptions="End" MinimumHeightRequest="10"  WidthRequest="76" HeightRequest="76" CornerRadius="35"/>
+            </yummy:PancakeView>
+            <!--stars-->
+            <rating:SfRating Grid.Column="0" Grid.Row="2" x:Name="sfRating" ItemCount="5" Value="5" ReadOnly="true" ItemSize="25" HeightRequest="35" HorizontalOptions="StartAndExpand" Margin="30,0,0,0"/>
+            <Label Grid.Column="1" Grid.Row="2" Text="4.8" HorizontalOptions="Start" Style="{StaticResource MediumLabelStyle}" FontAttributes="Bold" TextColor="#fe9a0f" FontSize="18" Padding="20,0,0,0"/>
+            <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  Style="{StaticResource MediumLabelStyle}" Margin="35,5,30,0" Text="Creamy peanut butter and frozen and dark chocolate with 
+                   some cacao all mixed with frozen, berries, served with cherry on top." TextColor="Silver"/>
+            <CollectionView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"  ItemsSource="{Binding FilterLists}" Margin="35,20,30,20" 
+                 HeightRequest="90" VerticalOptions="FillAndExpand" HorizontalScrollBarVisibility="Never" ItemsLayout="HorizontalList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="0,0,15,0">
+                            <Frame HeightRequest="46" WidthRequest="35" HasShadow="False" BackgroundColor="{DynamicResource SecundaryBranding}" CornerRadius="23">
+                                <Grid RowDefinitions="Auto,Auto" VerticalOptions="StartAndExpand">
+                                    <Image Grid.Row="0" HeightRequest="16" Source="{Binding Icon}"/>
+                                    <Label Grid.Row="1" Text="{Binding Name}" FontSize="10" HorizontalTextAlignment="Center"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+           <!--buttom-->
+            <Label Grid.Row="5" Grid.Column="0" Text="$12.00" Padding="45,0,0,25" Style="{StaticResource MediumLabelStyle}" FontSize="20" FontAttributes="Bold" VerticalOptions="End"/>
+            <!--Add to Cart button-->
+            <yummy:PancakeView Grid.Row="5" Grid.Column="1" CornerRadius="50,0,0,0" IsClippedToBounds="true" HeightRequest="75" VerticalOptions="End">
+                <Button Style="{StaticResource ButtonStyle}" TextColor="White" Text="Add to cart" FontSize="22" HeightRequest="20" FontAttributes="Bold" WidthRequest="220"/>
+            </yummy:PancakeView>
+        </Grid>
+        
+        </StackLayout>
+</ContentPage>
